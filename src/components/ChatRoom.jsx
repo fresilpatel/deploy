@@ -13,7 +13,8 @@ const ChatRoom = () => {
   const connectWebSocket = useCallback(() => {
     if (!userName) return;
 
-    const url = `ws://localhost:5000/ws?name=${encodeURIComponent(userName)}`;
+    const url = `wss://chatroom123-gvg5duh5c3a0heam.canadacentral-01.azurewebsites.net/ws?name=${encodeURIComponent(userName)}`;
+
 
     if (socketRef.current && socketRef.current.readyState === WebSocket.OPEN) {
       console.log("WebSocket is already open.");
