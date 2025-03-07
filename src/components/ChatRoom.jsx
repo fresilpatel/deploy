@@ -13,7 +13,7 @@ const ChatRoom = () => {
   const connectWebSocket = useCallback(() => {
     if (!userName) return;
 
-    const url = `wss://chatroom11-fuh3gqdhf3dadjh0.westindia-01.azurewebsites.net/ws?name=${encodeURIComponent(userName)}`;
+    const url = `wss://backend-deploy-2-l6sz.onrender.com/ws?name=${encodeURIComponent(userName)}`;
 
 
     if (socketRef.current && socketRef.current.readyState === WebSocket.OPEN) {
